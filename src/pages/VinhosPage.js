@@ -4,6 +4,7 @@ import { listVinhos } from "../actions/vinhoActions";
 import { useDispatch, useSelector } from "react-redux";
 import SmallFooter from "../componentes/SmallFooter";
 import { Helmet } from "react-helmet-async";
+import { HashLoader } from "react-spinners";
 
 function VinhosPage(props) {
   const vinhoList = useSelector((state) => state.vinhoList);
@@ -17,7 +18,9 @@ function VinhosPage(props) {
   }, []);
   console.log(vinhos);
   return loading ? (
-    <div>Loading...</div>
+    <div className="loading">
+      <HashLoader color="rgb(112, 53, 53)" />
+    </div>
   ) : error ? (
     <div>{error}</div>
   ) : (
