@@ -16,7 +16,7 @@ function VinhosPage(props) {
     dispatch(listVinhos());
     return () => {};
   }, []);
-  console.log(vinhos);
+
   return loading ? (
     <div className="loading">
       <HashLoader color="rgb(112, 53, 53)" />
@@ -35,7 +35,7 @@ function VinhosPage(props) {
             <li key={vinho._id}>
               <div className="vinho-item">
                 <div className="vinhos-img">
-                  <img src={vinho.image} loading="eager" alt="Garrafas Quinta do Cabril"></img>
+                  <img src={vinho.image} alt="Garrafas Quinta do Cabril"></img>
                 </div>
                 <div className="vinhos-texto">
                   <h3>{vinho.nome}</h3>
