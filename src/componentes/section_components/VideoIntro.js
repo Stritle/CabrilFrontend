@@ -5,25 +5,31 @@ import { HashLoader } from "react-spinners";
 
 const VideoIntro = () => {
   const [isLoading, setIsLoading] = useState(true);
-  console.log(isLoading)
+  console.log(isLoading);
 
   useEffect(() => {
-    setIsLoading(false);
-    return;
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+    return () => clearTimeout(timer);
   });
 
-  return isLoading ? (
-    <div className="loading">
-      <HashLoader color="rgb(112, 53, 53)" />
-    </div>
-  ) : (
-    <div className="video-intro">
-      <video autoPlay muted loop>
-        <source src={video} type="video/mp4"></source>
-      </video>
-      <div>
-        <img src={logoIntro} alt="Logotipo"></img>
-      </div>
+  return (
+    <div>
+      {isLoading ? (
+        <div className="loadingVideo">
+          <HashLoader color="rgb(112, 53, 53)" />
+        </div>
+      ) : (
+        <div className="video-intro">
+          <video autoPlay muted loop>
+            <source src={video} type="video/mp4"></source>
+          </video>
+          <div>
+            <img src={logoIntro} alt="Logotipo"></img>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
