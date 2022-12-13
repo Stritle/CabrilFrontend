@@ -1,0 +1,50 @@
+.orderHistory {
+  margin-top: 25vh;
+  margin-inline: 20vw;
+  h1 {
+    color: #531918;
+  }
+  .table-container {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    table {
+      border: 1px solid #531918;
+      border-radius: 15px;
+      thead {
+        th {
+          border-bottom: 2px solid #531918;
+
+          padding: 015px;
+          color: #531918;
+        }
+      }
+      tbody {
+        tr {
+          td {
+            padding: 0 1vw;
+            text-align: center;
+            button {
+              margin-top: 0.5vh;
+              margin-bottom: 0.5vh;
+              padding: 4px 10px;
+              background-color: #531918;
+              color: aliceblue;
+              border-radius: 10px;
+              border: 0;
+              text-transform: uppercase;
+              transition: 0.7s;
+              cursor: pointer;
+              &:hover {
+                background-color: aliceblue;
+                color: #531918;
+
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

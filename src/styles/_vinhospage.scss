@@ -1,0 +1,129 @@
+$corApontamento: #bd3f3f;
+$corApontamentoHover: #7e1a1a;
+$buttonBackground: rgb(83, 25, 25);
+#root {
+  height: 100%;
+}
+
+.loja {
+  width: 100%;
+
+  h1 {
+    margin-top: 9%;
+    text-align: center;
+    font-size: 2.5rem;
+    color: $corApontamentoHover;
+    font-weight: 100;
+  }
+
+  .content-loja {
+    margin: 1% 0 0 0;
+
+    .vinho-ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+
+      li {
+        flex: 1 1 300px;
+        height: 51vh;
+        background-color: rgb(234, 235, 223);
+        border-radius: 1px;
+        margin: 20px 35px 55px 35px;
+        border: 1px solid rgb(229, 230, 227);
+        box-shadow: 3px 3px 10px $buttonBoxShadow;
+        transition: 0.5s;
+        &:hover {
+          background-color: rgb(208, 208, 208);
+        }
+
+        .vinho-item {
+          position: relative;
+          width: 100%;
+
+          .vinhos-img {
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 1rem;
+
+            img {
+              width: 60%;
+              transition: 0.5s;
+            }
+
+            p {
+              margin: 0 32% 0 32%;
+              text-align: center;
+              color: saddlebrown;
+              background-color: $buttonBackground;
+              border-radius: 0;
+            }
+          }
+
+          .vinhos-qty {
+            float: left;
+            width: 100%;
+            height: 20%;
+            p {
+              float: left;
+              width: 47%;
+              text-align: right;
+              margin-top: 10px;
+              font-weight: 600;
+            }
+            select {
+              float: left;
+              width: 10%;
+              margin: 10px 0 3% 5px;
+              text-align: center;
+            }
+            div {
+              margin-top: 7%;
+              width: fit-content;
+              margin: 0 auto;
+              a {
+                position: relative;
+                text-decoration: none;
+                font-family: Playfair;
+                font-size: 20px;
+                border: 2px solid $buttonBackground;
+                background-color: $buttonBackground;
+                padding: 5px 50px;
+                color: white;
+                transition: 0.7s;
+                box-shadow: 3px 3px 10px $buttonBoxShadow;
+                border-radius: 1px;
+
+                &:hover {
+                  background-color: rgb(234, 235, 223);
+                  color: $corApontamentoHover;
+                }
+              }
+            }
+          }
+          .vinhos-texto {
+            float: left;
+            width: 100%;
+            height: 8%;
+
+            h3 {
+              margin-top: 0.5rem;
+              margin-bottom: 1.7rem;
+              font-family: "Playfair Display", serif;
+              text-align: center;
+              font-size: 0.8rem;
+              color: $buttonBackground;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    border-top: 3px solid $corApontamentoHover;
+  }
+}
+
+// li:nth-child(2){
+//   transform: skew(0deg, 5deg);

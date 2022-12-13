@@ -1,0 +1,153 @@
+$corApontamento: #bd3f3f;
+$corApontamentoHover: #7e1a1a;
+$buttonBackground: rgb(83, 25, 25);
+$buttonBoxShadow: rgb(83, 25, 25);
+
+.vinhos {
+  scroll-snap-align: start;
+  overflow: none;
+  position: relative;
+  float: left;
+  height: 100vh;
+  width: 100%;
+  background-image: url("./images/BackgroundIntro.png");
+  background-size: contain;
+  h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin: 9% 0 0 0;
+    color: $corApontamentoHover;
+    font-weight: 100;
+  }
+  h3 {
+    text-align: center;
+    margin: 0 0 3rem 0;
+  }
+  .garrafa {
+    float: left;
+    margin: 0 2px 0 2px;
+    width: 24%;
+    height: auto;
+    border-radius: 1px;
+    img {
+      width: 60%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      transition: 0.5s;
+      &:hover {
+        margin-top: -30px;
+        width: 65%;
+      }
+    }
+    p {
+      font-family: "Playfair Display", serif;
+      text-align: center;
+      font-size: 1.2rem;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+  }
+  .button {
+    position: relative;
+    text-align: center;
+    float: left;
+    margin: auto;
+    margin-top: 2%;
+    width: 100%;
+    height: 8%;
+
+    a {
+      text-decoration: none;
+      font-family: Playfair;
+      border: 2px solid $buttonBackground;
+      background-color: $buttonBackground;
+      padding: 19px 80px;
+      color: white;
+      transition: 0.7s;
+      box-shadow: 3px 3px 10px $buttonBoxShadow;
+      &:hover {
+        background-color: transparent;
+        color: $corApontamentoHover;
+      }
+    }
+  }
+}
+@media (max-width: 650px) {
+  .vinhos {
+    scroll-snap-align: start;
+    overflow: none;
+    position: relative;
+    float: left;
+    height: 100vh;
+    width: 100%;
+
+    h1 {
+      font-size: 1.6rem;
+      text-align: center;
+      margin: 3% 0 5% 0;
+      color: $corApontamentoHover;
+    }
+    .flex-conf {
+      display: flex;
+      flex-wrap: wrap;
+
+      .garrafa {
+        flex: 1 1 150px;
+        float: left;
+        margin: 0 2px 0 2px;
+        width: 24%;
+        height: auto;
+        border-radius: 1px;
+        img {
+          width: 60%;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        p {
+          font-family: Playfair;
+          color: black;
+          text-align: center;
+          font-size: 0.6rem;
+          margin-top: 20px;
+          margin-bottom: 30px;
+        }
+      }
+    }
+    .button {
+      position: relative;
+      text-align: center;
+      float: left;
+      margin: auto;
+      margin-top: 3%;
+      width: 100%;
+      height: 8%;
+
+      a {
+        text-decoration: none;
+        font-family: Playfair;
+        border: 2px solid $buttonBackground;
+        background-color: $buttonBackground;
+        padding: 14px 80px;
+        color: white;
+        transition: 0.7s;
+        box-shadow: 3px 3px 10px rgb(83, 25, 25);
+        &:hover {
+          background-color: transparent;
+          color: $corApontamentoHover;
+        }
+      }
+    }
+  }
+  /////////////////ajustei phone 6
+
+  // .ajustebot{
+  // position: absolute;
+  // bottom:0;
+  // left: 0;
+  // width: 100%;
+  // height: 108px;
+  // background-color: black;
+  // }
+}

@@ -1,0 +1,59 @@
+.register {
+  height: 100vh;
+  width: 100%;
+  float: left;
+  h1 {
+    margin: 10% 0 3% 0;
+    text-align: center;
+    font-weight: 100;
+    font-size: 2.2rem;
+    color: $corApontamentoHover;
+  }
+  li {
+    margin-left: 37%;
+    list-style: none;
+    label {
+      font-family: Playball;
+    }
+    input {
+      border: 2px solid rgb(220, 220, 220);
+      border-radius: 2px;
+      height: 25px;
+      width: 400px;
+    }
+    button {
+      margin-right: 50px;
+      margin-top: 10px;
+      font-family: Playball;
+      font-size: 1.1rem;
+      text-decoration: none;
+      padding: 15px 60px;
+      border: 2px solid $buttonBackground;
+      color: #fff;
+      background-color: $buttonBackground;
+      opacity: 0.95;
+      transition: 0.7s;
+      box-shadow: 3px 3px 10px rgb(83, 25, 25);
+      cursor: pointer;
+
+      &:hover {
+        background-color: transparent;
+        color: $corApontamentoHover;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: rgb(83, 25, 25);
+      font-size: 1.3rem;
+      transition: 0.5s;
+      &:hover {
+        color: #bd3f3f;
+        font-size: 1.4rem;
+      }
+    }
+  }
+  .smallFooter {
+    position: sticky;
+    top: 90vh;
+  }
+}

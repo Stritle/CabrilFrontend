@@ -1,0 +1,44 @@
+.profile {
+  margin-top: 25vh;
+  margin-inline: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h1 {
+    font-size: 2.2rem;
+    color: $corApontamentoHover;
+  }
+  form {
+    justify-content: center;
+    li {
+      list-style: none;
+      label {
+        font-family: Playball;
+      }
+      input {
+        border: 2px solid rgb(220, 220, 220);
+        border-radius: 2px;
+        height: 25px;
+        width: 400px;
+      }
+      button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #531918;
+        color: aliceblue;
+        border-radius: 10px;
+        border: 0;
+        text-transform: uppercase;
+        transition: 0.7s;
+        cursor: pointer;
+        &:hover {
+          background-color: aliceblue;
+          color: #531918;
+          border: 2px solid #531918;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+//cores
+$corApontamentos: rgb(112, 53, 53);
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: "Playball", cursive;
+}
+
+.p-small {
+  font-size: 0.6rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+}
+
+.rating {
+  color: rgb(122, 57, 57);
+}
+hr {
+  border-color: $corApontamentos;
+}
+
+.app {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  scroll-snap-type: y mandatory;
+  overflow: auto;
+}
+section {
+  scroll-snap-align: start;
+}
+@import "./styles/_videoIntro.scss", "./styles/_imageIntro.scss",
+  "./styles/_navbar.scss", "./styles/_intro.scss", "./styles/_fotos.scss",
+  "./styles/_noticias.scss", "./styles/_quinta.scss", "./styles/_historia.scss",
+  "./styles/_vinhos.scss", "./styles/_blog.scss", "./styles/_last.scss",
+  "./styles/_login.scss", "./styles/_register.scss", "./styles/_cart.scss",
+  "./styles/_detailsVinho.scss", "./styles/_vinhosPage.scss",
+  "./styles/_historia.scss", "./styles/_footer.scss",
+  "./styles/_smallFooter.scss", "./styles/_shipping.scss", "./styles/payment",
+  "./styles/placeOrder", "./styles/orderHistory", "./styles/profile";

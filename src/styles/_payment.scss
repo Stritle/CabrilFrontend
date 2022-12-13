@@ -1,0 +1,41 @@
+.payment {
+  margin-top: 25vh;
+  margin-inline: 30vw;
+  h1 {
+    color: #531918;
+  }
+  form {
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    div {
+      label {
+        font-size: 1.3rem;
+        input {
+          border: 2px solid rgb(220, 220, 220);
+          border-radius: 5px;
+          color: #531918;
+          margin-right: 1vw;
+        }
+      }
+    }
+    button {
+      position: absolute;
+      margin-top: 10vh;
+      padding: 10px 20px;
+      background-color: #531918;
+      color: aliceblue;
+      border-radius: 10px;
+      border: 0;
+      text-transform: uppercase;
+      transition: 0.7s;
+      cursor: pointer;
+      &:hover {
+        background-color: aliceblue;
+        color: #531918;
+        border: 2px solid #531918;
+        font-weight: 600;
+      }
+    }
+  }
+}

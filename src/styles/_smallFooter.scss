@@ -1,0 +1,58 @@
+.smallFooter {
+  height: 10vh;
+  background-color: #5a2624;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  display: flex;
+  div {
+    flex: 3;
+    text-align: center;
+    p {
+      font-size: 0.8rem;
+      color: aliceblue;
+      font-family: "Playfair Display", serif;
+
+      &:first-child {
+        margin-top: 1rem;
+      }
+    }
+
+    svg {
+      font-size: 1.1rem;
+      margin-right: 1rem;
+      padding-top: 1.6rem;
+      color: aliceblue;
+    }
+    img {
+      margin-top: 5px;
+      width: 5vw;
+    }
+  }
+}
+@media (max-width: 650px) {
+  .smallFooter {
+    div {
+      p {
+        font-size: 0.7rem;
+        color: aliceblue;
+        font-family: "Playfair Display", serif;
+
+        &:first-child {
+          margin-top: 0.4rem;
+        }
+      }
+
+      svg {
+        font-size: 1.1rem;
+        margin-right: 0.5rem;
+        padding-top: 2rem;
+        color: aliceblue;
+      }
+      img {
+        margin-top: 15px;
+        width: 20vw;
+      }
+    }
+  }
+}

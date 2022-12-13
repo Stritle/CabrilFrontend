@@ -1,0 +1,5 @@
+
+[[redirects]]
+  from = "/api/*"
+  to = "https://quintacabril.netlify.app/" # Change to your server address/IP
+  status = 200

@@ -1,0 +1,37 @@
+.shipping {
+  margin-top: 25vh;
+  margin-inline: 30vw;
+  h1 {
+    color: #531918;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    label {
+      font-family: Playball;
+    }
+    input {
+      border: 2px solid rgb(220, 220, 220);
+      border-radius: 2px;
+      height: 25px;
+    }
+  }
+  button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #531918;
+    color: aliceblue;
+    border-radius: 10px;
+    border: 0;
+    text-transform: uppercase;
+    transition: 0.7s;
+    cursor: pointer;
+    &:hover {
+      background-color: aliceblue;
+      color: #531918;
+      border: 2px solid #531918;
+      font-weight: 600;
+    }
+  }
+}

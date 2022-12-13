@@ -1,0 +1,25 @@
+.last{
+    scroll-snap-align: start;
+    float:left;
+    position: relative;
+    width: 100%;
+    height: 100vh;    
+    img{
+        margin-top: 15vh;
+        width: 100%;
+        height: 55vh;
+    }
+}
+@media (max-width:650px){
+    .last{
+        scroll-snap-align: start;
+        float:left;
+        position: relative;
+        width: 100%;
+        height: 100vh;    
+        img{
+            width: 100%;
+            height: 40%;
+        }
+    }
+}

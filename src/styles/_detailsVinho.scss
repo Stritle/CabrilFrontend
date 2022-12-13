@@ -1,0 +1,87 @@
+.details {
+  width: 100%;
+  height: 100vh;
+
+  .details-container {
+    height: 90vh;
+    .details-image {
+      float: left;
+      margin: 20vh 0 0 10vw;
+      img {
+        height: 50vh;
+      }
+    }
+    .details-description {
+      margin: 18vh 0 0 0;
+      height: 46vh;
+      width: 55vw;
+      float: left;
+      strong {
+        margin-right: 5px;
+        font-family: "Playball", cursive;
+        font-size: 1.5rem;
+      }
+      p {
+        margin-top: 20px;
+        font-size: 1.1rem;
+        font-weight: 100;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      h1 {
+        font-weight: 100;
+        margin-top: 1.8vh;
+        color: $buttonBackground;
+      }
+    }
+    .details-buttons {
+      height: 10vh;
+      width: 70vw;
+      margin-left: 14.5vw;
+      float: left;
+      .details-qty {
+        display: flex;
+        width: 10vw;
+        height: 3vh;
+        margin-bottom: 10px;
+        p {
+          margin: 0 5px 0 0;
+        }
+      }
+      button {
+        position: relative;
+        text-decoration: none;
+        font-family: Playfair;
+        font-size: 20px;
+        border: 2px solid $buttonBackground;
+        background-color: $buttonBackground;
+        padding: 4px 50px;
+        color: white;
+        transition: 0.7s;
+        margin-bottom: 15vh;
+        box-shadow: 3px 3px 10px $buttonBoxShadow;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: transparent;
+          color: $corApontamentoHover;
+        }
+      }
+      .details-rating {
+        margin-top: 3rem;
+        float: right;
+        width: 25vw;
+        height: 7vh;
+        display: flex;
+        strong {
+          text-align: right;
+          margin-right: 5px;
+          display: flex;
+        }
+      }
+    }
+  }
+}
+.footer {
+  border-top: 3px solid $corApontamentoHover;
+}
