@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { CgShoppingCart } from "react-icons/cg";
 import Rating from "../componentes/Rating";
 import SmallFooter from "../componentes/SmallFooter";
+import { HashLoader } from "react-spinners";
 
 const DetailsVinho = (props) => {
   const [qty, setQty] = useState(1);
@@ -30,9 +31,10 @@ const DetailsVinho = (props) => {
 
   return (
     <div>
-   
       {loading ? (
-        <div className="loading">Loading...</div>
+        <div className="loading">
+          <HashLoader color="rgb(112, 53, 53)" />
+        </div>
       ) : error ? (
         <div>{error}</div>
       ) : (
