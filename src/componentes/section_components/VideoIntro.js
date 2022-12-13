@@ -7,10 +7,11 @@ const VideoIntro = () => {
   const [isLoading, setIsLoading] = useState(true);
   console.log(isLoading);
 
-  useEffect(() => {
+  useEffect(() => 
+  {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 2000);
     return () => clearTimeout(timer);
   });
 
