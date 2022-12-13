@@ -21,7 +21,7 @@ import Profile from "./pages/Profile";
 import OrderHistory from "./pages/OrderHistory";
 
 function App() {
-  export const URL=process.env.REACT_APP_SERVER_URL;
+  
   return (
     <div className="App">
       <Navbar />
