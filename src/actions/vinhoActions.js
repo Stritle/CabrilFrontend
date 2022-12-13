@@ -18,7 +18,7 @@ const listVinhos = () => async (dispatch) => {
     const { data } = await axios.get(`${URL}/api/vinhos`,{
       headers: { 'Access-Control-Allow-Origin' : '*',
       'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-    Origin:"https://quintadocabril.netlify.app/" },
+    "Origin":"https://quintadocabril.netlify.app/" },
     });
     dispatch({ type: VINHO_LIST_SUCCESS, payload: data });
   } catch (error) {
