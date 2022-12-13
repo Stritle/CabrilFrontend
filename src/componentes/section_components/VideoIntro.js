@@ -5,6 +5,7 @@ import { HashLoader } from "react-spinners";
 
 const VideoIntro = () => {
   const [isLoading, setIsLoading] = useState(true);
+  console.log(isLoading)
 
   useEffect(() => {
     setIsLoading(false);
