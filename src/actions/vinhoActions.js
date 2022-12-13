@@ -41,7 +41,7 @@ const saveVinho = (vinho) => async (dispatch, getState) => {
 const detailsVinhos = (vinhoId) => async (dispatch) => {
   try {
     dispatch({ type: VINHO_DETAILS_REQUEST, payload: vinhoId });
-    const { data } = await axios.get(`${URL}/api/vinhos` + vinhoId);
+    const { data } = await axios.get(`${URL}/api/vinhos/` + vinhoId);
     dispatch({ type: VINHO_DETAILS_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: VINHO_DETAILS_FAIL, payload: error.message });
