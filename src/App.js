@@ -20,10 +20,10 @@ import Order from "./pages/Order";
 import Profile from "./pages/Profile";
 import OrderHistory from "./pages/OrderHistory";
 
-export const URL = "https://quintadocabrilapi.onrender.com";
+export const URL = process.env.URL_SERVER ||"";
 
 function App() {
-  
+console.log(URL)
 
   return (
     <div className="App">
