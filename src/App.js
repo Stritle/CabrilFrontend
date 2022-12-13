@@ -20,7 +20,7 @@ import Order from "./pages/Order";
 import Profile from "./pages/Profile";
 import OrderHistory from "./pages/OrderHistory";
 
-export const URL = process.env.URL_SERVER ||"";
+export const URL = "https://quintadocabrilapi.onrender.com";
 
 function App() {
 console.log(URL)
