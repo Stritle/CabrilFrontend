@@ -11,6 +11,7 @@ a {
 }
 
 .loading {
+  margin-top: 25vh;
   width: 100vw;
   height: 100vh;
   display: -webkit-box;
