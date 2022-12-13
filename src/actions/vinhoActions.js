@@ -15,7 +15,7 @@ const listVinhos = () => async (dispatch) => {
   try {
     dispatch({ type: VINHO_LIST_REQUEST });
     const { data } = await axios.get(
-      "https://quintadocabrilapi.onrender.com/api/vinhos"
+      "/api/vinhos"
     );
     dispatch({ type: VINHO_LIST_SUCCESS, payload: data });
   } catch (error) {
