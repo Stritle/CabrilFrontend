@@ -20,8 +20,11 @@ import Order from "./pages/Order";
 import Profile from "./pages/Profile";
 import OrderHistory from "./pages/OrderHistory";
 
+export const URL = "https://quintadocabrilapi.onrender.com";
+
 function App() {
   
+
   return (
     <div className="App">
       <Navbar />

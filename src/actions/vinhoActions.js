@@ -10,12 +10,13 @@ import {
   VINHO_SAVE_REQUEST,
 } from "../constants/vinhoConstants";
 import axios from "axios";
+import URL from '../App'
 
 const listVinhos = () => async (dispatch) => {
   try {
     dispatch({ type: VINHO_LIST_REQUEST });
     const { data } = await axios.get(
-      "https://quintadocabrilapi.onrender.com/api/vinhos"
+      `${URL}/api/vinhos`
     );
     dispatch({ type: VINHO_LIST_SUCCESS, payload: data });
   } catch (error) {
@@ -28,7 +29,7 @@ const saveVinho = (vinho) => async (dispatch, getState) => {
     const {
       userSignin: { userInfo },
     } = getState();
-    const { data } = await axios.post("/api/vinhos", vinho, {
+    const { data } = await axios.post(`${URL}/api/vinhos`, vinho, {
       headers: {
         Authorization: "Bearer" + userInfo.token,
       },
@@ -42,7 +43,7 @@ const saveVinho = (vinho) => async (dispatch, getState) => {
 const detailsVinhos = (vinhoId) => async (dispatch) => {
   try {
     dispatch({ type: VINHO_DETAILS_REQUEST, payload: vinhoId });
-    const { data } = await axios.get("/api/vinhos/" + vinhoId);
+    const { data } = await axios.get(`${URL}/api/vinhos`+ vinhoId);
     dispatch({ type: VINHO_DETAILS_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: VINHO_DETAILS_FAIL, payload: error.message });

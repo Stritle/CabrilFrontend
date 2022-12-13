@@ -8,6 +8,7 @@ import {
   PAYMENT_METHOD_SUCCESS,
   PAYMENT_METHOD_REQUEST,
 } from "../constants/purchaseConstants";
+import URL from '../App'
 
 const saveAddress =
   (fullName, city, country, postalCode, address) => async (dispatch) => {
@@ -16,7 +17,7 @@ const saveAddress =
       payload: { fullName, city, country, postalCode, address },
     });
     try {
-      const { data } = await axios.post("/api/orders/saveAddress", {
+      const { data } = await axios.post(`${URL}/api/orders/saveAddress`, {
         fullName,
         city,
         country,
@@ -36,7 +37,7 @@ const savePaymentMethod = (paymentMethod) => async (dispatch) => {
     payload: { paymentMethod },
   });
   try {
-    const { data } = await axios.post("/api/purchase/savePaymentMethod", {
+    const { data } = await axios.post(`${URL}/api/purchase/savePaymentMethod`, {
       paymentMethod,
     });
     dispatch({ type: PAYMENT_METHOD_SUCCESS, payload: data });
