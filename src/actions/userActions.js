@@ -13,7 +13,7 @@ import {
   USER_UPDATE_FAIL,
 } from "../constants/userConstants";
 
-import URL from '../App'
+import {URL} from '../App'
 
 const signin = (email, password) => async (dispatch) => {
   dispatch({ type: USER_SIGNIN_REQUEST, payload: { email, password } });

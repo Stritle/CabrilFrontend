@@ -8,7 +8,7 @@ import {
   PAYMENT_METHOD_SUCCESS,
   PAYMENT_METHOD_REQUEST,
 } from "../constants/purchaseConstants";
-import URL from '../App'
+import {URL} from '../App'
 
 const saveAddress =
   (fullName, city, country, postalCode, address) => async (dispatch) => {

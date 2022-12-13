@@ -27,7 +27,7 @@ const saveVinho = (vinho) => async (dispatch, getState) => {
     const {
       userSignin: { userInfo },
     } = getState();
-    const { data } = await axios.post(`${URL}/api/vinhos`, vinho, {
+    const { data } = await axios.post(`${URL}/api/vinhos/`, vinho, {
       headers: {
         Authorization: "Bearer" + userInfo.token,
       },
