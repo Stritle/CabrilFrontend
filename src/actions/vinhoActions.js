@@ -10,12 +10,13 @@ import {
   VINHO_SAVE_REQUEST,
 } from "../constants/vinhoConstants";
 import axios from "axios";
-import {URL} from '../App.js'
 
 const listVinhos = () => async (dispatch) => {
   try {
     dispatch({ type: VINHO_LIST_REQUEST });
-    const { data } = await axios.get("/api/vinhos");
+    const { data } = await axios.get(
+      "https://quintadocabrilapi.onrender.com/api/vinhos"
+    );
     dispatch({ type: VINHO_LIST_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: VINHO_LIST_FAIL, payload: error.message });
