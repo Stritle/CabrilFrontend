@@ -30,8 +30,9 @@ const DetailsVinho = (props) => {
 
   return (
     <div>
-      {<div className="loading">loading</div> ? (
-        <div>Loading...</div>
+   
+      {loading ? (
+        <div className="loading">Loading...</div>
       ) : error ? (
         <div>{error}</div>
       ) : (
