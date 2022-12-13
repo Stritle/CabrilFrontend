@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Footer from "../componentes/SmallFooter";
 import { createOrder } from "../actions/orderActions";
+import { URL } from "../App";
 
 const PlaceOrder = (props) => {
   const cart = useSelector((state) => state.cart);

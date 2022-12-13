@@ -28,7 +28,7 @@ const createOrder = (order) => async (dispatch, getState) => {
     } = getState();
     const {
       data: { data: newOrder },
-    } = await Axios.post("/api/orders", order, {
+    } = await Axios.post(`${URL}/api/orders`, order, {
       headers: {
         Authorization: userInfo.token,
       },
@@ -45,7 +45,7 @@ const listMyOrders = () => async (dispatch, getState) => {
     const {
       userSignin: { userInfo },
     } = getState();
-    const { data } = await Axios.get("/api/orders/mine", {
+    const { data } = await Axios.get(`${URL}/api/orders/mine`, {
       headers: { Authorization: userInfo.token },
     });
     dispatch({ type: MY_ORDER_LIST_SUCCESS, payload: data });
@@ -60,7 +60,7 @@ const listOrders = () => async (dispatch, getState) => {
     const {
       userSignin: { userInfo },
     } = getState();
-    const { data } = await Axios.get("/api/orders", {
+    const { data } = await Axios.get(`${URL}/api/orders`, {
       headers: { Authorization: userInfo.token },
     });
     dispatch({ type: ORDER_LIST_SUCCESS, payload: data });
@@ -75,7 +75,7 @@ const detailsOrder = (orderId) => async (dispatch, getState) => {
     const {
       userSignin: { userInfo },
     } = getState();
-    const { data } = await Axios.get("/api/orders/" + orderId, {
+    const { data } = await Axios.get(`${URL}/api/orders` + orderId, {
       headers: { Authorization: userInfo.token },
     });
     dispatch({ type: ORDER_DETAILS_SUCCESS, payload: data });
@@ -91,7 +91,7 @@ const payOrder = (order, paymentResult) => async (dispatch, getState) => {
       userSignin: { userInfo },
     } = getState();
     const { data } = await Axios.put(
-      "/api/orders/" + order._id + "/pay",
+      `${URL}/api/orders` + order._id + "/pay",
       paymentResult,
       {
         headers: { Authorization: userInfo.token },
@@ -109,7 +109,7 @@ const deleteOrder = (orderId) => async (dispatch, getState) => {
     const {
       userSignin: { userInfo },
     } = getState();
-    const { data } = await Axios.delete("/api/orders/" + orderId, {
+    const { data } = await Axios.delete(`${URL}/api/orders`+ orderId, {
       headers: { Authorization: userInfo.token },
     });
     dispatch({ type: ORDER_DELETE_SUCCESS, payload: data });
