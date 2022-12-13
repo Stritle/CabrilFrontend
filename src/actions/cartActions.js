@@ -10,7 +10,7 @@ import {URL} from "../App";
 
 const addToCart = (vinhoId, qty) => async (dispatch, getState) => {
   try {
-    const { data } = await axios.get(`${URL}/api/vinhos/` + vinhoId);
+    const { data } = await axios.get(`${URL}/api/vinhos/` + vinhoId,);
     console.log(URL);
     dispatch({
       type: CART_ADD_ITEM,

@@ -15,7 +15,10 @@ import { URL } from "../App";
 const listVinhos = () => async (dispatch) => {
   try {
     dispatch({ type: VINHO_LIST_REQUEST });
-    const { data } = await axios.get(`${URL}/api/vinhos`);
+    const { data } = await axios.get(`${URL}/api/vinhos`,{
+      headers: { 'Access-Control-Allow-Origin' : '*',
+      'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS', },
+    });
     dispatch({ type: VINHO_LIST_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: VINHO_LIST_FAIL, payload: error.message });
