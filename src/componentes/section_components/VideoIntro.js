@@ -12,7 +12,9 @@ const VideoIntro = () => {
   });
 
   return isLoading ? (
-    <HashLoader color="rgb(112, 53, 53)" />
+    <div className="loading">
+      <HashLoader color="rgb(112, 53, 53)" />
+    </div>
   ) : (
     <div className="video-intro">
       <video autoPlay muted loop>
