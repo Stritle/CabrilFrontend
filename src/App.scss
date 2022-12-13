@@ -11,7 +11,11 @@ p,
 a {
   font-family: "Playball", cursive;
 }
-
+.loading {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
 .p-small {
   font-size: 0.6rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
